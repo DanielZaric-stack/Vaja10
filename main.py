@@ -1,10 +1,10 @@
+sez = [1,2,3,4,5,6] # seznam števil
 
-sez = [1,2,3,4,5,6]
-
+#rekurzivna vsota
 def vsota(s):
     if s == []:
         return 0
 
-    return s[0] + s[1:]
+    return s[0] + vsota(s[1:])
 
 print(vsota(sez))
